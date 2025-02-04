@@ -1,0 +1,13 @@
+BDD: postgresql
+npm: 10.8.2
+node: 18.20.6
+
+Postgresql: 
+
+- Vérifier que postgresql tourne: 
+    - sudo systemctl status postgresql
+- Accéder a postgresql: 
+    - sudo -i -u postgres
+    - psql
+- Quitter: 
+    - \q
