@@ -1,0 +1,47 @@
+<div class="sidebar" [class.collapsed]="isCollapsed">  
+    <div class="sidebar-header">
+        <p class="title">Media Stacks</p>
+        <button class="reduce-btn" (click)="toggleSidebar()">☰</button>
+    </div>
+
+    <div class="sidebar-content">
+        <div class="icon-bar">
+            <button *ngFor="let item of icons" 
+                    (click)="selectIcon(item)" 
+                    [class.active]="selectedIcon === item" 
+                    class="icon-btn">
+                <fa-icon [icon]="item.icon"></fa-icon>
+            </button>
+        </div>
+        <div class="navigation-button-container">
+            <button
+            [ngClass]="{'active': activeButton === 'home'}" 
+        (click)="setActive('home')">
+                <fa-icon icon="house"></fa-icon>
+                Accueil
+            </button>
+            <button [ngClass]="{'active': activeButton === 'films'}" 
+            (click)="setActive('films')">
+                <fa-icon icon="film"></fa-icon>
+                Films
+            </button>
+            <button [ngClass]="{'active': activeButton === 'series'}" 
+            (click)="setActive('series')">
+                <fa-icon icon="desktop"></fa-icon>
+                Séries
+            </button>
+            <button
+            [ngClass]="{'active': activeButton === 'discover'}" 
+            (click)="setActive('discover')">
+                <fa-icon icon="binoculars"></fa-icon>
+                Découvrir
+            </button>
+            <button [ngClass]="{'active': activeButton === 'user'}" 
+            (click)="setActive('user')">
+                <fa-icon icon="user"></fa-icon>
+                Profils
+            </button>
+        </div>
+    </div>
+</div>
+  

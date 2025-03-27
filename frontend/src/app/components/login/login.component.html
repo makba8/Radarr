@@ -1,0 +1,20 @@
+<div class="login-container">
+  <h2>Connexion</h2>
+  <form class="form-login" (ngSubmit)="login()">
+    <div class="input-group">
+      <label for="mail"><strong>Email :</strong></label>
+      <input type="mail"  id="mail" [(ngModel)]="mail" name="mail" required />
+    </div>
+
+    <div class="input-group">
+      <label for="password"><strong>Mot de passe :</strong></label>
+      <input type="password" matInput id="password" [(ngModel)]="password" name="password" required />
+    </div>
+
+    <button type="submit">Se connecter</button>
+
+    <p class="register-link">
+      Pas encore de compte ? <a routerLink="/register">S'inscrire</a>
+    </p>
+  </form>
+</div>

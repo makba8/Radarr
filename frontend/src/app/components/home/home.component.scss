@@ -1,0 +1,18 @@
+.home-container {
+  display: flex;
+  transition: margin-left 0.3s ease, padding-left 0.3s ease;
+  background-color: rgb(29, 29, 29);
+  height: 100%;
+  color: white;
+  padding-left: 300px;
+}
+
+.home-content {
+  flex-grow: 1;
+  transition: margin-left 0.6s ease;
+}
+
+/* Quand la barre est réduite, le contenu prend plus de place */
+.home-container.expanded {
+  padding-left: 90px;
+}

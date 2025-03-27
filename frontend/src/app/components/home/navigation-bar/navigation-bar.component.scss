@@ -1,0 +1,122 @@
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(to bottom, #00473d, #061307);
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+    display:flex;
+    flex-flow: column;
+  }
+  
+// Style lorsque la barre est réduite
+  .sidebar.collapsed {
+    width: 60px;
+    overflow: hidden;
+    padding: 10px;
+  }
+  
+  .sidebar-header {
+    display: flex;
+    flex-flow: row ;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+.sidebar.collapsed .sidebar-header {
+    flex-flow: column;
+}
+
+  .title {
+    font-size: 24px;
+    margin: auto; 
+  }
+
+  .reduce-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+.icon-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px; 
+    background-color: #1d1d1d8e;
+    width: 85%;
+    border-radius: 10px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.icon-btn.active {
+    transform: scale(1.2) translateY(-10px);
+    color: #9eff91;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    background-color: #00332c;
+}
+
+
+.sidebar-content {
+    display: flex;
+    flex-flow: column;
+    align-items: center ;
+}
+
+.navigation-button-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+    width: 100%;
+
+    button {
+      width: 80%;
+      height: 40px;
+      justify-content: flex-start;
+      display: flex;
+      align-items: center;
+      gap: 29px; 
+      background-color: #0b351900;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      
+    }
+    fa-icon{
+      margin-left: 10px;
+    }
+    button.active {
+      transform: scale(0.95);
+      box-shadow: 0px 4px 14px 2px rgba(0,0,0,0.38);
+      background-color: #1d1d1d8e;
+      fa-icon{
+        color: #9eff91;
+      }
+  }
+
+}

@@ -2,7 +2,10 @@ BDD: postgresql
 npm: 10.8.2
 node: 18.20.6
 
-Postgresql: 
+Postgresql (TypeORM): 
+User: admin
+MDP: 1234
+Name database: database
 
 - Vérifier que postgresql tourne: 
     - sudo systemctl status postgresql

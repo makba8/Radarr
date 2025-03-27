@@ -1,0 +1,30 @@
+<div class="register-container">
+  <h2>Inscription</h2>
+  <form class='form-register'(ngSubmit)="register()">
+    <div class="input-group">
+      <label for="username"><strong>Nom d'utilisateur :</strong></label>
+      <input type="text" id="username" [(ngModel)]="username" name="username" required />
+    </div>
+
+    <div class="input-group">
+      <label for="mail"><strong>Email :</strong></label>
+      <input type="mail" id="mail" [(ngModel)]="mail" name="mail" required />
+    </div>
+
+    <div class="input-group">
+      <label for="password"><strong>Mot de passe :</strong></label>
+      <input type="password" id="password" [(ngModel)]="password" name="password" required />
+    </div>
+
+    <div class="input-group">
+      <label for="confirmPassword"><strong>Confirmer le mot de passe :</strong></label>
+      <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" required />
+    </div>
+
+    <button type="submit">S'inscrire</button>
+
+    <p class="login-link">
+      Déjà un compte ? <a routerLink="/login">Se connecter</a>
+    </p>
+  </form>
+</div>
