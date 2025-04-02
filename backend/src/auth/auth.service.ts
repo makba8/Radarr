@@ -31,8 +31,6 @@ export class AuthService {
 
   async register(userData: RegisterDto, res: Response) {
     try {
-    console.log('User Data:', userData); // Vérifie que les données arrivent bien
-  
     if (!userData.password) {
       throw new Error('Password is missing'); // Ajoute un check de sécurité
     }

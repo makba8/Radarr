@@ -32,9 +32,7 @@ export class RegisterComponent {
         if (response.accessToken) {
           // Stocke l'Access Token dans localStorage
           localStorage.setItem('accessToken', response.accessToken);
-          console.log('Access Token stocké dans localStorage:', response.accessToken);
         }
-        console.log('Inscription réussie!', response);
         alert('Inscription réussie! Merci de vous connecter.');
         this.router.navigate(['/login']);
       },

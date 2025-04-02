@@ -33,7 +33,6 @@ export class UserService {
   }
 
   async create(createUserDto: CreateUserDto) {
-    console.log('User Data service:', createUserDto); // Vérifie que les données arrivent bien  
     return await this.userRepository.save(createUserDto);
   }
 

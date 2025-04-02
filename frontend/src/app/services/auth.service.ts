@@ -17,7 +17,6 @@ export class AuthService {
   }
 
   register(user: { username: string; mail: string; password: string }): Observable<any> {
-    console.log('User Data:', user);  // Vérifie que les données arrivent bien  
     return this.http.post(`${this.apiUrl}/auth/register`, user, { withCredentials: true });
   }
 
@@ -27,7 +26,6 @@ export class AuthService {
   }
 
   isAuthenticated(): boolean {
-    // Si le cookie accessToken est trouvé, renvoie true, sinon false
     return !!localStorage.getItem('accessToken');
   }
 
